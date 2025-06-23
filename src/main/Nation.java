@@ -7,6 +7,10 @@ import java.io.IOException;
 
 public class Nation {
     private BufferedImage flag;
+    
+    private String name;
+    private String capitalCity;
+    private String currency;
 
     //Constructor
     Nation(){
