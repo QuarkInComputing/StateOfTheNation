@@ -1,0 +1,24 @@
+{
+    "events": [
+        {
+            "title": "Protests Against Austerity",
+            "body": "Thousands have flocked to our capital today to protest the existing austerity measures - they are demanding change",
+            "responses": [
+                {
+                    "text": "We have to listen to them",
+                    "effects": {
+                        "politcalfreedom": 1,
+                        "governmentspending": -1
+                    }
+                },
+                {
+                    "text": "Its fortunate that we didn't cut police spending",
+                    "effects": {
+                        "politcalfreedom": -1,
+                        "authority": 1
+                    }
+                }
+            ]
+        }
+    ]
+}
