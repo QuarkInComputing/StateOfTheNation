@@ -39,12 +39,12 @@ public class NationGUI extends javax.swing.JFrame {
         btn_settings = new javax.swing.JButton();
         pnl_nationoptions = new javax.swing.JPanel();
         btn_optionsreturn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        lbl_optionsname = new javax.swing.JLabel();
+        fld_name = new javax.swing.JTextField();
+        lbl_optionscapital = new javax.swing.JLabel();
+        fld_capital = new javax.swing.JTextField();
+        lbl_optionscurrency = new javax.swing.JLabel();
+        fld_currency = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -145,17 +145,11 @@ public class NationGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("Country Name");
+        lbl_optionsname.setText("Country Name");
 
-        jTextField1.setText("jTextField1");
+        lbl_optionscapital.setText("Capital City");
 
-        jLabel2.setText("Capital City");
-
-        jTextField2.setText("jTextField2");
-
-        jLabel3.setText("Currency");
-
-        jTextField3.setText("jTextField3");
+        lbl_optionscurrency.setText("Currency");
 
         javax.swing.GroupLayout pnl_nationoptionsLayout = new javax.swing.GroupLayout(pnl_nationoptions);
         pnl_nationoptions.setLayout(pnl_nationoptionsLayout);
@@ -169,15 +163,15 @@ public class NationGUI extends javax.swing.JFrame {
                         .addGap(829, 829, 829))
                     .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
                         .addGroup(pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
+                            .addComponent(lbl_optionscurrency)
+                            .addComponent(lbl_optionscapital)
+                            .addComponent(lbl_optionsname))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
                         .addGroup(pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(fld_currency, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING))
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         pnl_nationoptionsLayout.setVerticalGroup(
@@ -186,17 +180,17 @@ public class NationGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(btn_optionsreturn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
+                .addComponent(lbl_optionsname)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fld_name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel2)
+                .addComponent(lbl_optionscapital)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(fld_capital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
+                .addComponent(lbl_optionscurrency)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fld_currency, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(577, 577, 577))
         );
 
@@ -250,15 +244,15 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JButton btn_nationoptions;
     private javax.swing.JButton btn_optionsreturn;
     private javax.swing.JButton btn_settings;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField fld_capital;
+    private javax.swing.JTextField fld_currency;
+    private javax.swing.JTextField fld_name;
     private javax.swing.JLabel lbl_capital;
     private javax.swing.JLabel lbl_flag;
     private javax.swing.JLabel lbl_name;
+    private javax.swing.JLabel lbl_optionscapital;
+    private javax.swing.JLabel lbl_optionscurrency;
+    private javax.swing.JLabel lbl_optionsname;
     private javax.swing.JPanel pnl_countryinfo;
     private javax.swing.JLabel pnl_currency;
     private javax.swing.JPanel pnl_nationoptions;
