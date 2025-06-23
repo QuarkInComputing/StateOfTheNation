@@ -2,7 +2,7 @@
     "nation": [
         {
             "name": "Almania",
-            "capital": "Alman",
+            "capitalCity": "Alman",
             "currency": "Gold",
             "Modifiers": [
                 {

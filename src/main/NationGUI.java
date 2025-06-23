@@ -37,7 +37,7 @@ public class NationGUI extends javax.swing.JFrame {
         btn_4 = new javax.swing.JButton();
         btn_nationoptions = new javax.swing.JButton();
         btn_settings = new javax.swing.JButton();
-        pnl_nationoptions = new javax.swing.JPanel();
+        pnl_countryoptions = new javax.swing.JPanel();
         btn_optionsreturn = new javax.swing.JButton();
         lbl_optionsname = new javax.swing.JLabel();
         fld_name = new javax.swing.JTextField();
@@ -45,6 +45,7 @@ public class NationGUI extends javax.swing.JFrame {
         fld_capital = new javax.swing.JTextField();
         lbl_optionscurrency = new javax.swing.JLabel();
         fld_currency = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -151,34 +152,44 @@ public class NationGUI extends javax.swing.JFrame {
 
         lbl_optionscurrency.setText("Currency");
 
-        javax.swing.GroupLayout pnl_nationoptionsLayout = new javax.swing.GroupLayout(pnl_nationoptions);
-        pnl_nationoptions.setLayout(pnl_nationoptionsLayout);
-        pnl_nationoptionsLayout.setHorizontalGroup(
-            pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
+        jLabel1.setFont(new java.awt.Font("URW Gothic", 0, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel1.setText("Options");
+
+        javax.swing.GroupLayout pnl_countryoptionsLayout = new javax.swing.GroupLayout(pnl_countryoptions);
+        pnl_countryoptions.setLayout(pnl_countryoptionsLayout);
+        pnl_countryoptionsLayout.setHorizontalGroup(
+            pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
-                        .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
-                        .addGap(829, 829, 829))
-                    .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
-                        .addGroup(pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_optionscurrency)
                             .addComponent(lbl_optionscapital)
                             .addComponent(lbl_optionsname))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
-                        .addGroup(pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(fld_currency, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                            .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                                .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGap(667, 667, 667)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(fld_currency, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                                    .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING))
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())))
         );
-        pnl_nationoptionsLayout.setVerticalGroup(
-            pnl_nationoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnl_nationoptionsLayout.createSequentialGroup()
+        pnl_countryoptionsLayout.setVerticalGroup(
+            pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btn_optionsreturn, javax.swing.GroupLayout.PREFERRED_SIZE, 25, Short.MAX_VALUE)
+                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lbl_optionsname)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -194,7 +205,7 @@ public class NationGUI extends javax.swing.JFrame {
                 .addGap(577, 577, 577))
         );
 
-        getContentPane().add(pnl_nationoptions, "card3");
+        getContentPane().add(pnl_countryoptions, "card3");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -204,11 +215,13 @@ public class NationGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_eventsActionPerformed
 
     private void btn_nationoptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nationoptionsActionPerformed
-        // TODO add your handling code here:
+        pnl_countryinfo.setVisible(false);
+        pnl_countryoptions.setVisible(true);
     }//GEN-LAST:event_btn_nationoptionsActionPerformed
 
     private void btn_optionsreturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_optionsreturnActionPerformed
-        // TODO add your handling code here:
+        pnl_countryoptions.setVisible(false);
+        pnl_countryinfo.setVisible(true);
     }//GEN-LAST:event_btn_optionsreturnActionPerformed
 
     /**
@@ -247,6 +260,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JTextField fld_capital;
     private javax.swing.JTextField fld_currency;
     private javax.swing.JTextField fld_name;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbl_capital;
     private javax.swing.JLabel lbl_flag;
     private javax.swing.JLabel lbl_name;
@@ -254,7 +268,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_optionscurrency;
     private javax.swing.JLabel lbl_optionsname;
     private javax.swing.JPanel pnl_countryinfo;
+    private javax.swing.JPanel pnl_countryoptions;
     private javax.swing.JLabel pnl_currency;
-    private javax.swing.JPanel pnl_nationoptions;
     // End of variables declaration//GEN-END:variables
 }
