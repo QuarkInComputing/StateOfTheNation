@@ -59,6 +59,7 @@ public class NationGUI extends javax.swing.JFrame {
         lbl_optionscurrency = new javax.swing.JLabel();
         fld_currency = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        btn_updateoptions = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -83,7 +84,7 @@ public class NationGUI extends javax.swing.JFrame {
             }
         });
 
-        btn_2.setText("jButton1");
+        btn_2.setText("Policy");
 
         btn_3.setText("jButton3");
 
@@ -147,7 +148,7 @@ public class NationGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_currency))
                     .addComponent(lbl_flag, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(615, Short.MAX_VALUE))
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnl_countryinfo, "card2");
@@ -169,6 +170,8 @@ public class NationGUI extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setText("Options");
 
+        btn_updateoptions.setText("Update");
+
         javax.swing.GroupLayout pnl_countryoptionsLayout = new javax.swing.GroupLayout(pnl_countryoptions);
         pnl_countryoptions.setLayout(pnl_countryoptionsLayout);
         pnl_countryoptionsLayout.setHorizontalGroup(
@@ -178,14 +181,8 @@ public class NationGUI extends javax.swing.JFrame {
                 .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
                         .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_optionscurrency)
-                            .addComponent(lbl_optionscapital)
-                            .addComponent(lbl_optionsname))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                                .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
                                 .addGap(667, 667, 667)
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
@@ -194,7 +191,14 @@ public class NationGUI extends javax.swing.JFrame {
                                     .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addGap(0, 0, Short.MAX_VALUE)))
-                        .addContainerGap())))
+                        .addContainerGap())
+                    .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_updateoptions)
+                            .addComponent(lbl_optionscurrency)
+                            .addComponent(lbl_optionscapital)
+                            .addComponent(lbl_optionsname))
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         pnl_countryoptionsLayout.setVerticalGroup(
             pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -215,7 +219,9 @@ public class NationGUI extends javax.swing.JFrame {
                 .addComponent(lbl_optionscurrency)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fld_currency, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(577, 577, 577))
+                .addGap(18, 18, 18)
+                .addComponent(btn_updateoptions)
+                .addGap(533, 533, 533))
         );
 
         getContentPane().add(pnl_countryoptions, "card3");
@@ -230,6 +236,10 @@ public class NationGUI extends javax.swing.JFrame {
     private void btn_nationoptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nationoptionsActionPerformed
         pnl_countryinfo.setVisible(false);
         pnl_countryoptions.setVisible(true);
+        
+        fld_name.setText(myNation.getName());
+        fld_capital.setText(myNation.getCapitalCity());
+        fld_currency.setText(myNation.getCurrency());
     }//GEN-LAST:event_btn_nationoptionsActionPerformed
 
     private void btn_optionsreturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_optionsreturnActionPerformed
@@ -270,6 +280,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JButton btn_nationoptions;
     private javax.swing.JButton btn_optionsreturn;
     private javax.swing.JButton btn_settings;
+    private javax.swing.JButton btn_updateoptions;
     private javax.swing.JTextField fld_capital;
     private javax.swing.JTextField fld_currency;
     private javax.swing.JTextField fld_name;
