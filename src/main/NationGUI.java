@@ -1,18 +1,23 @@
 package main;
 
+import java.util.List;
 import javax.swing.ImageIcon;
 
 public class NationGUI extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NationGUI.class.getName());
     
-    private Nation myNation = new Nation();
+    private Nation myNation;
 
     /**
      * Creates new form NationGUI
      */
     public NationGUI() {
         initComponents();
+        
+        List<NationData> dataList = NationLoader.loadNations(".src/countrydata/nation.json");
+        NationData nationData = dataList.get(0);
+        myNation = new Nation(nationData);
         
         lbl_flag.setIcon(new ImageIcon(myNation.getFlag()));
     }
@@ -134,7 +139,7 @@ public class NationGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(pnl_currency))
                     .addComponent(lbl_flag, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(615, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnl_countryinfo, "card2");
