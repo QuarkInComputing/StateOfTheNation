@@ -20,6 +20,14 @@ public class NationGUI extends javax.swing.JFrame {
         myNation = new Nation(nationData);
         
         lbl_flag.setIcon(new ImageIcon(myNation.getFlag()));
+        
+        setInfo();
+    }
+    
+    private void setInfo(){
+        lbl_name.setText("Name: "+myNation.getName());
+        lbl_capital.setText("Capital: "+myNation.getCapitalCity());
+        lbl_currency.setText("Currency: "+myNation.getCurrency());
     }
 
     /**
@@ -35,7 +43,7 @@ public class NationGUI extends javax.swing.JFrame {
         lbl_flag = new javax.swing.JLabel();
         lbl_name = new javax.swing.JLabel();
         lbl_capital = new javax.swing.JLabel();
-        pnl_currency = new javax.swing.JLabel();
+        lbl_currency = new javax.swing.JLabel();
         btn_events = new javax.swing.JButton();
         btn_2 = new javax.swing.JButton();
         btn_3 = new javax.swing.JButton();
@@ -66,7 +74,7 @@ public class NationGUI extends javax.swing.JFrame {
 
         lbl_capital.setText("Capital:");
 
-        pnl_currency.setText("Currency: ");
+        lbl_currency.setText("Currency: ");
 
         btn_events.setText("Events");
         btn_events.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +123,7 @@ public class NationGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(pnl_countryinfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(lbl_capital)
-                            .addComponent(pnl_currency)
+                            .addComponent(lbl_currency)
                             .addComponent(lbl_name))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -137,7 +145,7 @@ public class NationGUI extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(lbl_capital)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnl_currency))
+                        .addComponent(lbl_currency))
                     .addComponent(lbl_flag, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(615, Short.MAX_VALUE))
         );
@@ -267,6 +275,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JTextField fld_name;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel lbl_capital;
+    private javax.swing.JLabel lbl_currency;
     private javax.swing.JLabel lbl_flag;
     private javax.swing.JLabel lbl_name;
     private javax.swing.JLabel lbl_optionscapital;
@@ -274,6 +283,5 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_optionsname;
     private javax.swing.JPanel pnl_countryinfo;
     private javax.swing.JPanel pnl_countryoptions;
-    private javax.swing.JLabel pnl_currency;
     // End of variables declaration//GEN-END:variables
 }

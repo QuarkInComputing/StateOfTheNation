@@ -64,7 +64,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="lbl_capital" min="-2" max="-2" attributes="0"/>
-                              <Component id="pnl_currency" min="-2" max="-2" attributes="0"/>
+                              <Component id="lbl_currency" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_name" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -92,7 +92,7 @@
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="lbl_capital" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="pnl_currency" min="-2" max="-2" attributes="0"/>
+                          <Component id="lbl_currency" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="lbl_flag" min="-2" pref="120" max="-2" attributes="0"/>
                   </Group>
@@ -120,7 +120,7 @@
             <Property name="text" type="java.lang.String" value="Capital:"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="pnl_currency">
+        <Component class="javax.swing.JLabel" name="lbl_currency">
           <Properties>
             <Property name="text" type="java.lang.String" value="Currency: "/>
           </Properties>
