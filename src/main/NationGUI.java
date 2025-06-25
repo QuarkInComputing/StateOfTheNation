@@ -8,6 +8,9 @@ public class NationGUI extends javax.swing.JFrame {
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(NationGUI.class.getName());
     
     private Nation myNation;
+    private JsonUpdater jsonupdate;
+    
+    private String nationfile = "./src/countrydata/nation.json";
 
     /**
      * Creates new form NationGUI
@@ -15,7 +18,7 @@ public class NationGUI extends javax.swing.JFrame {
     public NationGUI() {
         initComponents();
         
-        List<NationData> dataList = NationLoader.loadNations("./src/countrydata/nation.json");
+        List<NationData> dataList = NationLoader.loadNations(nationfile);
         NationData nationData = dataList.get(0);
         myNation = new Nation(nationData);
         
@@ -86,7 +89,7 @@ public class NationGUI extends javax.swing.JFrame {
 
         btn_2.setText("Policy");
 
-        btn_3.setText("jButton3");
+        btn_3.setText("Statistics");
 
         btn_4.setText("jButton4");
 
