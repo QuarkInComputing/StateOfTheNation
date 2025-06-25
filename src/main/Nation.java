@@ -1,5 +1,6 @@
 package main;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -43,8 +44,11 @@ public class Nation {
             
             for(Nation nation : data.nation){
                 this.name = nation.name;
+                System.out.println("Name: "+this.name);
                 this.capitalCity = nation.capitalCity;
+                System.out.println("Capital: "+this.capitalCity);
                 this.currency = nation.currency;
+                System.out.println("Currency: "+this.currency);
             }
         } catch (Exception e) {
             e.printStackTrace();
