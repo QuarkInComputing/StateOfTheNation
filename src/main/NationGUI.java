@@ -15,7 +15,7 @@ public class NationGUI extends javax.swing.JFrame {
     public NationGUI() {
         initComponents();
         
-        List<NationData> dataList = NationLoader.loadNations(".src/countrydata/nation.json");
+        List<NationData> dataList = NationLoader.loadNations("./src/countrydata/nation.json");
         NationData nationData = dataList.get(0);
         myNation = new Nation(nationData);
         

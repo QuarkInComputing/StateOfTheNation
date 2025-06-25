@@ -9,7 +9,7 @@ public class NationLoader {
     public static List<NationData> loadNations(String parth){
         try {
             ObjectMapper mapper = new ObjectMapper();
-            return mapper.readValue(new File(".src/countrydata/nation.json"), new TypeReference<List<NationData>>() {});
+            return mapper.readValue(new File("./src/countrydata/nation.json"), new TypeReference<List<NationData>>() {});
         } catch (Exception e) {
             e.printStackTrace();
             return null;
