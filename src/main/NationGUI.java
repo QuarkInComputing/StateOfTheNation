@@ -98,9 +98,9 @@ public class NationGUI extends javax.swing.JFrame {
 
         btn_2.setText("Policy");
 
-        btn_3.setText("Statistics");
+        btn_3.setText("Economy");
 
-        btn_4.setText("jButton4");
+        btn_4.setText("Statistics");
 
         btn_nationoptions.setText("Nation Options");
         btn_nationoptions.addActionListener(new java.awt.event.ActionListener() {

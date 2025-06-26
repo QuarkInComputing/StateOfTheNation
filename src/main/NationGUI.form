@@ -140,12 +140,12 @@
         </Component>
         <Component class="javax.swing.JButton" name="btn_3">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Statistics"/>
+            <Property name="text" type="java.lang.String" value="Economy"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btn_4">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jButton4"/>
+            <Property name="text" type="java.lang.String" value="Statistics"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btn_nationoptions">
