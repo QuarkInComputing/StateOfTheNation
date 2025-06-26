@@ -196,12 +196,16 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="btn_updateoptions" min="-2" max="-2" attributes="0"/>
+                              <Group type="102" attributes="0">
+                                  <Component id="btn_updateoptions" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lbl_updateAlert" min="-2" pref="115" max="-2" attributes="0"/>
+                              </Group>
                               <Component id="lbl_optionscurrency" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_optionscapital" min="-2" max="-2" attributes="0"/>
                               <Component id="lbl_optionsname" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          <EmptySpace min="0" pref="734" max="32767" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -228,7 +232,10 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="fld_currency" min="-2" max="-2" attributes="0"/>
                   <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Component id="btn_updateoptions" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="btn_updateoptions" min="-2" max="-2" attributes="0"/>
+                      <Component id="lbl_updateAlert" min="-2" pref="26" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="533" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -276,6 +283,16 @@
         <Component class="javax.swing.JButton" name="btn_updateoptions">
           <Properties>
             <Property name="text" type="java.lang.String" value="Update"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_updateoptionsActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lbl_updateAlert">
+          <Properties>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="2d" green="2d" red="cc" type="rgb"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

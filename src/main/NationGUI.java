@@ -24,8 +24,6 @@ public class NationGUI extends javax.swing.JFrame {
         
         lbl_flag.setIcon(new ImageIcon(myNation.getFlag()));
         
-//        jsonupdate.updateJson(nationfile);
-        
         setInfo();
     }
     
@@ -65,6 +63,7 @@ public class NationGUI extends javax.swing.JFrame {
         fld_currency = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         btn_updateoptions = new javax.swing.JButton();
+        lbl_updateAlert = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -176,6 +175,13 @@ public class NationGUI extends javax.swing.JFrame {
         jLabel1.setText("Options");
 
         btn_updateoptions.setText("Update");
+        btn_updateoptions.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_updateoptionsActionPerformed(evt);
+            }
+        });
+
+        lbl_updateAlert.setForeground(new java.awt.Color(204, 45, 45));
 
         javax.swing.GroupLayout pnl_countryoptionsLayout = new javax.swing.GroupLayout(pnl_countryoptions);
         pnl_countryoptions.setLayout(pnl_countryoptionsLayout);
@@ -199,11 +205,14 @@ public class NationGUI extends javax.swing.JFrame {
                         .addContainerGap())
                     .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
                         .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btn_updateoptions)
+                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
+                                .addComponent(btn_updateoptions)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lbl_updateAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(lbl_optionscurrency)
                             .addComponent(lbl_optionscapital)
                             .addComponent(lbl_optionsname))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGap(0, 734, Short.MAX_VALUE))))
         );
         pnl_countryoptionsLayout.setVerticalGroup(
             pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,7 +234,9 @@ public class NationGUI extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(fld_currency, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btn_updateoptions)
+                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btn_updateoptions)
+                    .addComponent(lbl_updateAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(533, 533, 533))
         );
 
@@ -248,9 +259,20 @@ public class NationGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btn_nationoptionsActionPerformed
 
     private void btn_optionsreturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_optionsreturnActionPerformed
+        lbl_updateAlert.setText("");
+        
         pnl_countryoptions.setVisible(false);
         pnl_countryinfo.setVisible(true);
     }//GEN-LAST:event_btn_optionsreturnActionPerformed
+
+    private void btn_updateoptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_updateoptionsActionPerformed
+
+        jsonupdate.updateBasic(nationfile, "name", fld_name.getText());
+        jsonupdate.updateBasic(nationfile, "capitalCity", fld_capital.getText());
+        jsonupdate.updateBasic(nationfile, "currency", fld_currency.getText());
+        
+        lbl_updateAlert.setText("Updated!");
+    }//GEN-LAST:event_btn_updateoptionsActionPerformed
 
     /**
      * @param args the command line arguments
@@ -297,6 +319,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_optionscapital;
     private javax.swing.JLabel lbl_optionscurrency;
     private javax.swing.JLabel lbl_optionsname;
+    private javax.swing.JLabel lbl_updateAlert;
     private javax.swing.JPanel pnl_countryinfo;
     private javax.swing.JPanel pnl_countryoptions;
     // End of variables declaration//GEN-END:variables
