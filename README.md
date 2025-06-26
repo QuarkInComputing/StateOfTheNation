@@ -16,9 +16,12 @@ A game made with the Java Swing framework, heavily inspired by the
 
 ## Roadmap
 
-- [ ] Customisable nations
+- [X] Customisable nation details
+- [ ] Custom flag upload
+- [ ] Flag ripple effect
 - [ ] Pool of country issues to act on
-- [ ] War system
+- [ ] Policy section
+- [ ] Economy section
 - [ ] More to come
 
 ## License
