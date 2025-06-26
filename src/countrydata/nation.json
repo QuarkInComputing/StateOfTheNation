@@ -1,21 +1,15 @@
-[
-    {
-        "name": "Almania",
-        "capitalCity": "Alman",
-        "currency": "Gold",
-        "Modifiers": [
-            {
-                "politicalfreedom": 50,
-                "governmentspending": 60,
-                "autority": 80,
-                "economy": 75
-            }
-        ],
-        "Government": [
-            {
-                "ideology": "monarchy",
-                "elections": "limited"
-            }
-        ]
-    }
-]
+[ {
+  "name" : "Almania",
+  "capitalCity" : "Alman",
+  "currency" : "Gold",
+  "Modifiers" : [ {
+    "politicalfreedom" : 50,
+    "governmentspending" : 60,
+    "autority" : 80,
+    "economy" : 75
+  } ],
+  "Government" : [ {
+    "ideology" : "monarchy",
+    "elections" : "limited"
+  } ]
+} ]

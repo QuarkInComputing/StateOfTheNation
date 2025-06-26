@@ -24,6 +24,8 @@ public class NationGUI extends javax.swing.JFrame {
         
         lbl_flag.setIcon(new ImageIcon(myNation.getFlag()));
         
+//        jsonupdate.updateJson(nationfile);
+        
         setInfo();
     }
     
