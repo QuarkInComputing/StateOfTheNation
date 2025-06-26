@@ -73,4 +73,14 @@ public class Nation {
     public String getElections() {
         return data.getGovernment().get(0).getElections();
     }
+
+    public void setFlag(BufferedImage flag) {
+        this.flag = flag;
+    }
+
+    public void setData(NationData data) {
+        this.data = data;
+    }
+    
+    
 }

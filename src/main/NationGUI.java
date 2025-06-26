@@ -32,6 +32,14 @@ public class NationGUI extends javax.swing.JFrame {
         lbl_capital.setText("Capital: "+myNation.getCapitalCity());
         lbl_currency.setText("Currency: "+myNation.getCurrency());
     }
+    
+    private void updateInfo(){
+        List<NationData> dataList = NationLoader.loadNations(nationfile);
+        NationData nationData = dataList.get(0);
+        myNation.setData(nationData);
+        
+        setInfo();
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -271,6 +279,7 @@ public class NationGUI extends javax.swing.JFrame {
         jsonupdate.updateBasic(nationfile, "capitalCity", fld_capital.getText());
         jsonupdate.updateBasic(nationfile, "currency", fld_currency.getText());
         
+        updateInfo();
         lbl_updateAlert.setText("Updated!");
     }//GEN-LAST:event_btn_updateoptionsActionPerformed
 
