@@ -72,6 +72,18 @@ public class NationGUI extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         btn_updateoptions = new javax.swing.JButton();
         lbl_updateAlert = new javax.swing.JLabel();
+        pnl_events = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btn_eventsreturn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jButton5 = new javax.swing.JButton();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1000, 800));
@@ -196,31 +208,27 @@ public class NationGUI extends javax.swing.JFrame {
         pnl_countryoptionsLayout.setHorizontalGroup(
             pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap()
                 .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                                .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
-                                .addGap(667, 667, 667)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(fld_currency, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
-                                    .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING))
-                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(btn_optionsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(52, 52, 52))
+                    .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(fld_currency, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(fld_capital, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(fld_name, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btn_updateoptions)
+                    .addComponent(lbl_optionscurrency)
+                    .addComponent(lbl_optionscapital)
+                    .addComponent(lbl_optionsname))
+                .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_countryoptionsLayout.createSequentialGroup()
+                        .addGap(634, 634, 634)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap())
                     .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                        .addGroup(pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnl_countryoptionsLayout.createSequentialGroup()
-                                .addComponent(btn_updateoptions)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(lbl_updateAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lbl_optionscurrency)
-                            .addComponent(lbl_optionscapital)
-                            .addComponent(lbl_optionsname))
-                        .addGap(0, 734, Short.MAX_VALUE))))
+                        .addComponent(lbl_updateAlert, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
         );
         pnl_countryoptionsLayout.setVerticalGroup(
             pnl_countryoptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -250,11 +258,106 @@ public class NationGUI extends javax.swing.JFrame {
 
         getContentPane().add(pnl_countryoptions, "card3");
 
+        jLabel2.setFont(new java.awt.Font("URW Gothic", 0, 18)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel2.setText("Events");
+
+        btn_eventsreturn.setText("Return");
+        btn_eventsreturn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn_eventsreturnActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/event/governmentbuilding.jpg"))); // NOI18N
+        jLabel3.setText("Event Image");
+        jLabel3.setPreferredSize(new java.awt.Dimension(80, 280));
+
+        jLabel4.setText("Event name");
+
+        jButton1.setText("jButton1");
+
+        jButton4.setText("jButton1");
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/event/governmentbuilding.jpg"))); // NOI18N
+        jLabel9.setText("Event Image");
+        jLabel9.setPreferredSize(new java.awt.Dimension(80, 280));
+
+        jLabel10.setText("Event name");
+
+        jButton5.setText("jButton1");
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/event/governmentbuilding.jpg"))); // NOI18N
+        jLabel11.setText("Event Image");
+        jLabel11.setPreferredSize(new java.awt.Dimension(80, 280));
+
+        jLabel12.setText("Event name");
+
+        javax.swing.GroupLayout pnl_eventsLayout = new javax.swing.GroupLayout(pnl_events);
+        pnl_events.setLayout(pnl_eventsLayout);
+        pnl_eventsLayout.setHorizontalGroup(
+            pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_eventsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnl_eventsLayout.createSequentialGroup()
+                        .addGroup(pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnl_eventsLayout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(pnl_eventsLayout.createSequentialGroup()
+                                .addComponent(btn_eventsreturn, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                                .addGap(730, 730, 730)
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap())
+                    .addGroup(pnl_eventsLayout.createSequentialGroup()
+                        .addGroup(pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton4)
+                            .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton5)
+                            .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        pnl_eventsLayout.setVerticalGroup(
+            pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnl_eventsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnl_eventsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(btn_eventsreturn))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton4)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton5)
+                .addContainerGap(252, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(pnl_events, "card4");
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn_eventsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eventsActionPerformed
-        // TODO add your handling code here:
+        pnl_countryinfo.setVisible(false);
+        pnl_events.setVisible(true);
     }//GEN-LAST:event_btn_eventsActionPerformed
 
     private void btn_nationoptionsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_nationoptionsActionPerformed
@@ -282,6 +385,11 @@ public class NationGUI extends javax.swing.JFrame {
         updateInfo();
         lbl_updateAlert.setText("Updated!");
     }//GEN-LAST:event_btn_updateoptionsActionPerformed
+
+    private void btn_eventsreturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_eventsreturnActionPerformed
+        pnl_events.setVisible(false);
+        pnl_countryinfo.setVisible(true);
+    }//GEN-LAST:event_btn_eventsreturnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,6 +421,7 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JButton btn_3;
     private javax.swing.JButton btn_4;
     private javax.swing.JButton btn_events;
+    private javax.swing.JButton btn_eventsreturn;
     private javax.swing.JButton btn_nationoptions;
     private javax.swing.JButton btn_optionsreturn;
     private javax.swing.JButton btn_settings;
@@ -320,7 +429,17 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JTextField fld_capital;
     private javax.swing.JTextField fld_currency;
     private javax.swing.JTextField fld_name;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lbl_capital;
     private javax.swing.JLabel lbl_currency;
     private javax.swing.JLabel lbl_flag;
@@ -331,5 +450,6 @@ public class NationGUI extends javax.swing.JFrame {
     private javax.swing.JLabel lbl_updateAlert;
     private javax.swing.JPanel pnl_countryinfo;
     private javax.swing.JPanel pnl_countryoptions;
+    private javax.swing.JPanel pnl_events;
     // End of variables declaration//GEN-END:variables
 }
